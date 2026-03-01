@@ -3,9 +3,9 @@
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#boats", label: "The Boats" },
+  { href: "#about", label: "About Mike" },
+  { href: "#services", label: "Trip Options" },
+  { href: "#boats", label: "The Fleet" },
   { href: "#gallery", label: "Gallery" },
   { href: "#testimonials", label: "Reviews" },
   { href: "#contact", label: "Book Now" },
@@ -20,7 +20,7 @@ export default function Header() {
         <a href="#" className="flex items-center gap-2">
           <FishIcon className="h-8 w-8 text-sunset-400" />
           <span className="font-[family-name:var(--font-heading)] text-xl font-bold text-white tracking-tight">
-            Michael&apos;s Guide Service
+            Trophy Fishing TN
           </span>
         </a>
 
@@ -40,6 +40,14 @@ export default function Header() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="tel:6156179032"
+              className="ml-2 px-3 py-2 text-sm font-medium text-sunset-400 hover:text-sunset-300 transition-colors"
+            >
+              615-617-9032
+            </a>
+          </li>
         </ul>
 
         {/* Mobile toggle */}
@@ -79,6 +87,15 @@ export default function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="tel:6156179032"
+                onClick={() => setOpen(false)}
+                className="block px-3 py-3 rounded-md text-base font-bold text-sunset-400 text-center"
+              >
+                Call: 615-617-9032
+              </a>
+            </li>
           </ul>
         </div>
       )}
@@ -88,8 +105,10 @@ export default function Header() {
 
 function FishIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 13v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V5.07c3.95.49 7 3.85 7 7.93 0 1.08-.21 2.11-.6 3.05l-.5.34z" />
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} xmlns="http://www.w3.org/2000/svg">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20.5 12c-2.5 4-6 6-9.5 6C6 18 3 15 3 12s3-6 8-6c3.5 0 7 2 9.5 6z" />
+      <circle cx="7.5" cy="11.5" r="1" fill="currentColor" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 9l-1.5 3L21 15" />
     </svg>
   );
 }

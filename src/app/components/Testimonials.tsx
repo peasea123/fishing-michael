@@ -2,25 +2,25 @@ const testimonials = [
   {
     name: "Jake R.",
     location: "Nashville, TN",
-    text: "Best fishing trip I've ever been on. Michael put us on fish all day long. We caught over 40 smallmouth in a single trip — several over 4 pounds. His knowledge of Center Hill Lake is unmatched.",
+    text: "Mike put us on fish all day long on the Caney Fork. We landed over 30 brown trout — several over 20 inches. His knowledge of the river is second to none, and the photos he took are hanging in my office now.",
     rating: 5,
   },
   {
     name: "Sarah & Tim W.",
     location: "Chattanooga, TN",
-    text: "We brought our two kids (ages 8 and 11) and Michael was incredible with them. Patient, fun, and made sure everyone caught fish. The kids are STILL talking about it. We'll be back every summer!",
+    text: "We brought our two kids for a trout float and Mike was incredible with them. Patient, encouraging, and made sure everyone caught fish. The drift boat was comfortable and the scenery was breathtaking. We'll be back every year!",
     rating: 5,
   },
   {
     name: "David M.",
     location: "Lexington, KY",
-    text: "The jet boat trip up the creek was unreal. We fished spots I didn't even know existed. Michael navigated shallow water like it was nothing. Landed my personal best smallmouth that day — 5.2 lbs.",
+    text: "The striper trip on the Cumberland was unreal. Mike took us in the jet boat to spots I didn't know existed. Landed my personal best striper on a fly — 28 pounds. The photos Mike took looked like they were straight out of a magazine.",
     rating: 5,
   },
   {
     name: "Chris L.",
     location: "Atlanta, GA",
-    text: "As a tournament angler, I hired Michael for pre-fish. His insight on seasonal patterns and structure saved me days of work. Finished 3rd in the event thanks to his guidance. Worth every penny.",
+    text: "I drove 4 hours for a musky trip with Mike and it was worth every mile. His custom-tied flies, his knowledge of the fish, and his patience — the man lives and breathes this stuff. Hooked into my first musky on the fly. Unforgettable.",
     rating: 5,
   },
 ];
@@ -47,7 +47,6 @@ export default function Testimonials() {
               key={idx}
               className="flex flex-col rounded-2xl bg-lake-50 p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
-              {/* Stars */}
               <div className="flex gap-1">
                 {Array.from({ length: t.rating }).map((_, i) => (
                   <svg

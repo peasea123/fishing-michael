@@ -3,32 +3,32 @@ import Image from "next/image";
 const photos = [
   {
     src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&fit=crop",
-    alt: "Angler holding a trophy largemouth bass on Center Hill Lake",
+    alt: "Trophy trout held over crystal clear water on the Caney Fork River",
     span: "sm:col-span-2 sm:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=400&q=80&fit=crop",
-    alt: "Beautiful sunrise over Center Hill Lake Tennessee",
-    span: "",
-  },
-  {
     src: "https://images.unsplash.com/photo-1606567595334-d39972c85dbe?w=400&q=80&fit=crop",
-    alt: "Fishing rods lined up ready for a guided trip",
+    alt: "Fly rods rigged and ready for a guided trip on the river",
     span: "",
   },
   {
     src: "https://images.unsplash.com/photo-1440558382541-ff4e12e25e65?w=400&q=80&fit=crop",
-    alt: "Calm waters reflecting the sky on the lake at dusk",
+    alt: "Calm waters reflecting dawn sky on Center Hill Lake",
     span: "",
   },
   {
     src: "https://images.unsplash.com/photo-1517242810446-cc8951b2be40?w=400&q=80&fit=crop",
-    alt: "Angler casting into golden light",
+    alt: "Angler casting a fly line into golden morning light",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1559734840-f9509ee5677f?w=600&q=80&fit=crop",
-    alt: "Smallmouth bass caught on Center Hill Lake",
+    src: "https://images.unsplash.com/photo-1559734840-f9509ee5677f?w=400&q=80&fit=crop",
+    alt: "Smallmouth bass caught on a fly rod in Tennessee",
+    span: "",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=600&q=80&fit=crop",
+    alt: "Scenic river view at sunrise — the Caney Fork at its finest",
     span: "sm:col-span-2",
   },
 ];
@@ -42,11 +42,12 @@ export default function Gallery() {
             On the Water
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-lake-900 sm:text-4xl lg:text-5xl">
-            Scenes from the Lake
+            Scenes from the River
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Every trip is a chance to make memories. Here&apos;s a taste of 
-            what a day with Michael looks like.
+            Every trip includes professional photography by Mike — a nationally
+            published photographer. Here&apos;s a taste of what a day with
+            Trophy Fishing TN looks like.
           </p>
         </div>
 

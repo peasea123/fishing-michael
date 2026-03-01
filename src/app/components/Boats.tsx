@@ -2,31 +2,45 @@ import Image from "next/image";
 
 const boats = [
   {
-    name: "The Bass Machine",
-    subtitle: "Premium Bass Boat",
+    name: "Supreme 20' Jet Boat",
+    subtitle: "The Go-Anywhere Jet Sled",
     image:
       "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80&fit=crop",
     description:
-      "Michael's flagship is a fully loaded, tournament-ready bass boat equipped with the latest in fish-finding sonar, GPS mapping, and live-scope technology. You'll see what's beneath the surface in real time — and know exactly where to cast.",
+      "Mike's flagship — a 20-foot fiberglass jet boat made famous on the White River as the ultimate guide boat. With jet-drive propulsion, this boat runs wide open on water just inches deep, unlocking shallow creeks, skinny rivers, and remote backwater spots that most anglers will never see. Perfect for striper, trout, and smallmouth trips.",
     specs: [
-      { label: "Electronics", value: "Garmin LiveScope & GPS" },
-      { label: "Motor", value: "250 HP Outboard" },
-      { label: "Capacity", value: "Guide + 2 Guests" },
-      { label: "Features", value: "Trolling Motor, Rod Lockers, Live Wells" },
+      { label: "Length", value: "20 Feet" },
+      { label: "Hull", value: "Fiberglass" },
+      { label: "Drive", value: "Jet Outboard" },
+      { label: "Draft", value: "Ultra-Shallow" },
     ],
   },
   {
-    name: "The Creek Runner",
-    subtitle: "Aluminum Jet Boat",
+    name: "Blazer 17' Jet Boat",
+    subtitle: "Nimble Creek Runner",
     image:
       "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&q=80&fit=crop",
     description:
-      "This rugged aluminum jet boat is built to go where others can't. With a jet-drive outboard, it skims over just inches of water — unlocking shallow creeks, skinny rivers, and remote backwater fishing spots that most anglers will never see.",
+      "A nimble 17-foot jet boat built to navigate the tightest waterways. When the creeks and tributaries get too narrow for the Supreme, the Blazer steps in. Ideal for spring creek adventures and getting to the most secluded fishing holes on the Cumberland Plateau.",
     specs: [
-      { label: "Drive", value: "Jet Outboard Propulsion" },
-      { label: "Draft", value: "Ultra-Shallow (6 inches)" },
-      { label: "Best For", value: "Rivers, Creeks & Backwaters" },
-      { label: "Range", value: "Caney Fork, Obey River & More" },
+      { label: "Length", value: "17 Feet" },
+      { label: "Drive", value: "Jet Propulsion" },
+      { label: "Best For", value: "Tight Creeks & Rivers" },
+      { label: "Range", value: "Cumberland Plateau & Beyond" },
+    ],
+  },
+  {
+    name: "Hyde 16' Drift Boat",
+    subtitle: "Classic River Float",
+    image:
+      "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=800&q=80&fit=crop",
+    description:
+      "The Hyde drift boat is the gold standard for river fly fishing. Purpose-built for floating the Caney Fork and Obey rivers, it gives you the perfect casting platform while Mike rows you through the best trout water in Tennessee. Quiet, stable, and built for all-day comfort.",
+    specs: [
+      { label: "Length", value: "16 Feet" },
+      { label: "Type", value: "Hyde Drift Boat" },
+      { label: "Best For", value: "Trout Float Trips" },
+      { label: "Rivers", value: "Caney Fork & Obey" },
     ],
   },
 ];
@@ -40,11 +54,12 @@ export default function Boats() {
             The Fleet
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-lake-900 sm:text-4xl lg:text-5xl">
-            Two Boats. Unlimited Possibilities.
+            Three Boats. Any Water.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            From deep-water bass to shallow creek smallmouth, Michael&apos;s 
-            versatile fleet lets him take you wherever the fish are biting.
+            Mike doesn&apos;t take short cuts on equipment. From drift boats to
+            jet sleds, every vessel is a top-notch, industry-proven guide boat
+            with a full complement of high-end electronics.
           </p>
         </div>
 
@@ -52,9 +67,7 @@ export default function Boats() {
           {boats.map((boat, idx) => (
             <div
               key={boat.name}
-              className={`grid gap-10 lg:grid-cols-2 lg:gap-16 items-center ${
-                idx % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
+              className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center"
             >
               <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
                 <div className="aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl">

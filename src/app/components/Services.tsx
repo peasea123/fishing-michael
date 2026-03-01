@@ -1,62 +1,98 @@
 const services = [
   {
-    title: "Full Day Trip",
-    duration: "8 Hours",
+    title: "Trout",
+    price: "$400",
+    duration: "Full Day",
     description:
-      "The ultimate Center Hill Lake experience. A full day on the water gives Michael time to run multiple patterns, hit the best spots, and keep you on fish from sunup. Includes all tackle, bait, and drinks.",
+      "Float the legendary Caney Fork River or Obey River for trophy brown and rainbow trout. Whether you prefer indicator nymphing or pounding the banks with streamers, Mike will put you on the fish. Drinks and snacks included.",
     features: [
-      "8 hours of guided fishing",
-      "All tackle & gear provided",
-      "Fish-finding technology",
+      "Caney Fork & Obey River",
+      "Brown & rainbow trout",
+      "All flies & gear provided",
+      "Drift boat or jet boat",
       "Drinks & snacks included",
-      "Up to 2 guests",
     ],
-    icon: SunIcon,
+    icon: FishIcon,
     highlight: true,
   },
   {
-    title: "Half Day Trip",
-    duration: "4 Hours",
+    title: "Striper on the Fly",
+    price: "$400",
+    duration: "Full Day",
     description:
-      "Perfect for families, beginners, or anyone short on time. Four focused hours is plenty to learn the techniques and land some great fish. Morning or afternoon departures available.",
+      "Chase Cumberland River trophy stripers — fish that can top 30 pounds. Mike's custom-tied Striper Slayers and years of experience on these waters give you the best shot at the fish of a lifetime.",
     features: [
-      "4 hours of guided fishing",
-      "All tackle & gear provided",
-      "Great for beginners & kids",
-      "Morning or afternoon slot",
-      "Up to 2 guests",
+      "Cumberland River system",
+      "Trophy striped bass",
+      "Heavy fly tackle provided",
+      "Jet boat access",
+      "Drinks & snacks included",
     ],
-    icon: ClockIcon,
+    icon: BoltIcon,
     highlight: false,
   },
   {
-    title: "Jet Boat Adventure",
-    duration: "Full or Half Day",
+    title: "Musky",
+    price: "$400",
+    duration: "Full Day",
     description:
-      "Go where no other guide can take you. Michael's jet-powered aluminum boat navigates the shallowest creeks, rivers, and backwaters to reach untouched fishing holes. Explore the Caney Fork, Obey River, and hidden waters.",
+      "The fish of 10,000 casts — but not with Mike. Winter and early spring are prime time for Tennessee musky on the Collins River and surrounding waters. This is big-game fly fishing at its most thrilling.",
     features: [
-      "Access ultra-shallow water",
-      "River & creek fishing",
-      "Explore beyond Center Hill",
-      "Jet outboard propulsion",
-      "Unique adventure experience",
+      "Collins River & more",
+      "Winter/spring specialty",
+      "Heavy streamer fishing",
+      "All tackle provided",
+      "Drinks & snacks included",
+    ],
+    icon: TargetIcon,
+    highlight: false,
+  },
+  {
+    title: "River Smallmouth",
+    price: "$350",
+    duration: "Full Day",
+    description:
+      "Explore Tennessee's incredible smallmouth bass fisheries from spring through fall. Poppers, streamers, and crawfish patterns on rivers that most anglers will never see — accessed by jet boat.",
+    features: [
+      "Multiple river systems",
+      "Spring through fall",
+      "Topwater & streamers",
+      "Jet boat shallow access",
+      "Drinks & snacks included",
     ],
     icon: RocketIcon,
     highlight: false,
   },
   {
-    title: "Tournament Prep",
-    duration: "Custom",
+    title: "Carp on the Fly",
+    price: "$350",
+    duration: "Full Day (Summer)",
     description:
-      "Competing on Center Hill Lake? Michael will share decades of tournament knowledge — seasonal patterns, key areas, and the techniques that win. Custom sessions built around your tournament schedule.",
+      "The closest thing to bonefishing in Middle Tennessee. Sight-fish for big carp on Percy Priest and Old Hickory lakes. Great practice for saltwater flats and an absolute blast on the fly rod.",
     features: [
-      "Pre-fish strategy sessions",
-      "Seasonal pattern breakdown",
-      "Structure & electronics training",
-      "Custom scheduling",
-      "Competition-focused",
+      "Percy Priest & Old Hickory",
+      "Summer only",
+      "Sight-fishing on flats",
+      "Great saltwater practice",
+      "Drinks & snacks included",
     ],
-    icon: TrophyIcon,
+    icon: SunIcon,
+    highlight: false,
+  },
+  {
+    title: "Photography Float",
+    price: "$300",
+    duration: "Full Day",
+    description:
+      "Not just about fishing — Mike is a nationally published wildlife photographer. Enjoy a scenic float down a beautiful Tennessee river, capturing stunning images of the wildlife and landscapes.",
+    features: [
+      "Scenic river float",
+      "Wildlife & landscape photos",
+      "Published photographer guide",
+      "Available when conditions allow",
+      "Drinks & snacks included",
+    ],
+    icon: CameraIcon,
     highlight: false,
   },
 ];
@@ -73,13 +109,13 @@ export default function Services() {
             Choose Your Adventure
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Every trip is tailored to your experience level and goals. 
-            Whether you want a relaxing day or an all-out fishing assault, 
-            Michael has you covered.
+            Fly fishing in Tennessee is a four-seasons opportunity. From winter
+            musky to summer carp, Mike has you covered year-round. Every trip
+            includes all gear, flies, and professional photography.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.title}
@@ -102,13 +138,22 @@ export default function Services() {
               />
 
               <h3 className="mt-4 text-xl font-bold">{service.title}</h3>
-              <p
-                className={`mt-1 text-sm font-semibold ${
-                  service.highlight ? "text-sunset-400" : "text-sunset-500"
-                }`}
-              >
-                {service.duration}
-              </p>
+              <div className="mt-1 flex items-baseline gap-2">
+                <span
+                  className={`text-2xl font-bold ${
+                    service.highlight ? "text-sunset-400" : "text-lake-900"
+                  }`}
+                >
+                  {service.price}
+                </span>
+                <span
+                  className={`text-sm ${
+                    service.highlight ? "text-lake-300" : "text-gray-500"
+                  }`}
+                >
+                  / {service.duration}
+                </span>
+              </div>
               <p
                 className={`mt-3 text-sm leading-relaxed flex-1 ${
                   service.highlight ? "text-lake-200" : "text-gray-600"
@@ -153,20 +198,38 @@ export default function Services() {
             </div>
           ))}
         </div>
+
+        <p className="mt-10 text-center text-sm text-gray-500">
+          All prices are per trip (guide + up to 2 guests). TN fishing license &amp;
+          trout stamp required — purchase at{" "}
+          <a href="https://www.tn.gov/twra" target="_blank" rel="noopener noreferrer" className="text-lake-600 underline hover:text-lake-800">
+            TWRA
+          </a>
+          . Meals can be arranged for an additional $20.
+        </p>
       </div>
     </section>
   );
 }
 
-function SunIcon({ className }: { className?: string }) {
+function FishIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M20.5 12c-2.5 4-6 6-9.5 6C6 18 3 15 3 12s3-6 8-6c3.5 0 7 2 9.5 6z" />
+      <circle cx="7.5" cy="11.5" r="1" fill="currentColor" />
     </svg>
   );
 }
 
-function ClockIcon({ className }: { className?: string }) {
+function BoltIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+    </svg>
+  );
+}
+
+function TargetIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -182,10 +245,19 @@ function RocketIcon({ className }: { className?: string }) {
   );
 }
 
-function TrophyIcon({ className }: { className?: string }) {
+function SunIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0116.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228M18.75 4.236V2.721" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+    </svg>
+  );
+}
+
+function CameraIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
     </svg>
   );
 }

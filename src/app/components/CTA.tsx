@@ -3,10 +3,9 @@ import Image from "next/image";
 export default function CTA() {
   return (
     <section id="contact" className="relative py-20 sm:py-28 scroll-mt-16 overflow-hidden">
-      {/* Background */}
       <Image
         src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80&fit=crop"
-        alt="Lake at golden hour"
+        alt="Tennessee river at golden hour"
         fill
         className="object-cover"
         sizes="100vw"
@@ -22,13 +21,12 @@ export default function CTA() {
             Book Your Trip Today
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-lake-200">
-            Spots fill up fast, especially during peak season. Get in touch 
-            to reserve your date and start planning an unforgettable day on 
-            the water.
+            Give Mike a call or fill out the form below. He&apos;ll give you an
+            honest rundown of current conditions and help you pick the best trip
+            for the season.
           </p>
         </div>
 
-        {/* Contact form */}
         <div className="mt-12 rounded-2xl bg-white p-6 sm:p-10 shadow-2xl">
           <form className="space-y-6" action="#" method="POST">
             <div className="grid gap-6 sm:grid-cols-2">
@@ -70,7 +68,7 @@ export default function CTA() {
                   id="phone"
                   name="phone"
                   className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-lake-500 focus:ring-2 focus:ring-lake-500/20 focus:outline-none transition-colors"
-                  placeholder="(555) 123-4567"
+                  placeholder="(615) 555-1234"
                 />
               </div>
               <div>
@@ -83,10 +81,12 @@ export default function CTA() {
                   className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-lake-500 focus:ring-2 focus:ring-lake-500/20 focus:outline-none transition-colors"
                 >
                   <option value="">Select a trip...</option>
-                  <option value="full-day">Full Day Trip (8 hrs)</option>
-                  <option value="half-day">Half Day Trip (4 hrs)</option>
-                  <option value="jet-boat">Jet Boat Adventure</option>
-                  <option value="tournament">Tournament Prep</option>
+                  <option value="trout">Trout — $400/day</option>
+                  <option value="striper">Striper on the Fly — $400/day</option>
+                  <option value="musky">Musky — $400/day</option>
+                  <option value="smallmouth">River Smallmouth — $350/day</option>
+                  <option value="carp">Carp on the Fly — $350/day</option>
+                  <option value="photography">Photography Float — $300/day</option>
                 </select>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function CTA() {
                 name="message"
                 rows={4}
                 className="mt-1 block w-full rounded-lg border border-gray-300 px-4 py-3 text-gray-900 shadow-sm focus:border-lake-500 focus:ring-2 focus:ring-lake-500/20 focus:outline-none transition-colors resize-none"
-                placeholder="Tell us about your group, experience level, or anything else..."
+                placeholder="Tell Mike about your experience level, what species you'd like to target, group size, or anything else..."
               />
             </div>
 
@@ -124,12 +124,12 @@ export default function CTA() {
             </button>
 
             <p className="text-center text-xs text-gray-500">
-              We&apos;ll get back to you within 24 hours to confirm availability and details.
+              Mike will get back to you promptly with an honest report on
+              conditions and availability. TN license &amp; trout stamp required.
             </p>
           </form>
         </div>
 
-        {/* Quick contact options */}
         <div className="mt-12 grid gap-6 sm:grid-cols-3">
           <div className="text-center">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-lake-800">
@@ -137,9 +137,9 @@ export default function CTA() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
             </div>
-            <p className="mt-3 text-sm font-semibold text-white">Call Direct</p>
-            <a href="tel:+15551234567" className="mt-1 text-sm text-sunset-400 hover:text-sunset-300 transition-colors">
-              (555) 123-FISH
+            <p className="mt-3 text-sm font-semibold text-white">Call Mike Direct</p>
+            <a href="tel:6156179032" className="mt-1 text-sm text-sunset-400 hover:text-sunset-300 transition-colors">
+              615-617-9032
             </a>
           </div>
 
@@ -150,8 +150,8 @@ export default function CTA() {
               </svg>
             </div>
             <p className="mt-3 text-sm font-semibold text-white">Email</p>
-            <a href="mailto:fish@michaelsguideservice.com" className="mt-1 text-sm text-sunset-400 hover:text-sunset-300 transition-colors">
-              fish@michaelsguideservice.com
+            <a href="mailto:mike@trophyfishingtn.com" className="mt-1 text-sm text-sunset-400 hover:text-sunset-300 transition-colors">
+              mike@trophyfishingtn.com
             </a>
           </div>
 
@@ -164,7 +164,8 @@ export default function CTA() {
             </div>
             <p className="mt-3 text-sm font-semibold text-white">Location</p>
             <p className="mt-1 text-sm text-sunset-400">
-              Center Hill Lake, Smithville, TN
+              4500 Coconut Ridge Rd<br />
+              Smithville, TN 37166
             </p>
           </div>
         </div>

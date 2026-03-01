@@ -3,44 +3,47 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title:
-    "Michael's Guide Service | Premier Fishing Guide on Center Hill Lake, TN",
+    "Trophy Fishing TN | Premier Fly Fishing Guide Service — Caney Fork, Cumberland River & Center Hill Lake",
   description:
-    "Book your unforgettable fishing adventure on Center Hill Lake, Tennessee with Michael — an experienced fishing guide with top-of-the-line bass boats, jet boat access, and decades of expertise. Smallmouth, largemouth, walleye, and more.",
+    "Book a guided fly fishing trip in Tennessee with Mike Anderson. 30+ years of experience on the Caney Fork River, Cumberland River, Obey River & Center Hill Lake. Trophy trout, striper, musky, and smallmouth. Professional photography included.",
   keywords: [
-    "fishing guide",
-    "Center Hill Lake",
-    "Tennessee fishing",
-    "bass fishing",
-    "smallmouth bass",
-    "largemouth bass",
-    "fishing charter",
-    "guided fishing trip",
+    "fly fishing guide Tennessee",
+    "Caney Fork River guide",
+    "Cumberland River striper",
+    "Tennessee fishing guide",
+    "trout fishing Tennessee",
+    "fly fishing Nashville",
     "Center Hill Lake guide",
-    "jet boat fishing",
-    "river fishing Tennessee",
-    "fishing guide near me",
+    "musky fishing Tennessee",
+    "smallmouth bass fly fishing",
+    "Obey River fishing",
+    "guided fishing trip TN",
+    "Trophy Fishing TN",
+    "Mike Anderson fishing guide",
+    "Smithville TN fishing",
+    "jet boat fishing guide",
   ],
   openGraph: {
-    title: "Michael's Guide Service | Center Hill Lake Fishing Guide",
+    title: "Trophy Fishing TN | Premier Fly Fishing Guide Service in Tennessee",
     description:
-      "Experience world-class fishing on Center Hill Lake, TN. Guided trips with premium boats and expert local knowledge.",
+      "Guided fly fishing trips with Mike Anderson — 30+ years of Tennessee fishing expertise. Trophy trout, striper, musky & more on the Caney Fork, Cumberland River & beyond.",
     type: "website",
     locale: "en_US",
-    url: "https://fishing-michael.vercel.app",
+    url: "https://trophyfishingtn.com",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop",
+        url: "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1200&h=630&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Fishing on Center Hill Lake Tennessee",
+        alt: "Fly fishing on a Tennessee river at sunrise",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Michael's Guide Service | Center Hill Lake Fishing Guide",
+    title: "Trophy Fishing TN | Tennessee Fly Fishing Guide",
     description:
-      "Book a guided fishing trip on Center Hill Lake, TN. Premium boats, expert knowledge, unforgettable catches.",
+      "Guided fly fishing trips on the Caney Fork, Cumberland River & beyond. 30+ years, premium boats, magazine-quality photography included.",
   },
   robots: {
     index: true,
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://fishing-michael.vercel.app",
+    canonical: "https://trophyfishingtn.com",
   },
 };
 
@@ -74,15 +77,18 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Michael's Guide Service",
+              name: "Trophy Fishing TN",
               description:
-                "Premier fishing guide service on Center Hill Lake, Tennessee. Expert-guided trips with top-of-the-line bass boats and jet boat for shallow water adventures.",
-              url: "https://fishing-michael.vercel.app",
-              telephone: "+1-555-FISH-NOW",
+                "Premier fly fishing guide service in Tennessee. Guided trips for trophy trout, striper, musky, and smallmouth on the Caney Fork River, Cumberland River, Center Hill Lake, and more. Over 30 years of experience. Professional photography included.",
+              url: "https://trophyfishingtn.com",
+              telephone: "+1-615-617-9032",
+              email: "mike@trophyfishingtn.com",
               address: {
                 "@type": "PostalAddress",
+                streetAddress: "4500 Coconut Ridge Rd",
                 addressLocality: "Smithville",
                 addressRegion: "TN",
+                postalCode: "37166",
                 addressCountry: "US",
               },
               geo: {
@@ -90,15 +96,21 @@ export default function RootLayout({
                 latitude: 36.0533,
                 longitude: -85.8142,
               },
-              areaServed: {
-                "@type": "Place",
-                name: "Center Hill Lake, Tennessee",
-              },
-              priceRange: "$$",
+              areaServed: [
+                { "@type": "Place", name: "Caney Fork River" },
+                { "@type": "Place", name: "Cumberland River" },
+                { "@type": "Place", name: "Center Hill Lake" },
+                { "@type": "Place", name: "Obey River" },
+                { "@type": "Place", name: "Collins River" },
+              ],
+              priceRange: "$350–$400",
               openingHours: "Mo-Su 05:00-20:00",
-              sameAs: [],
+              founder: {
+                "@type": "Person",
+                name: "Mike Anderson",
+              },
               image:
-                "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=630&fit=crop",
+                "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1200&h=630&fit=crop",
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Guided Fishing Trips",
@@ -107,28 +119,45 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Full Day Bass Boat Trip",
+                      name: "Trout Fishing — Full Day",
                       description:
-                        "8-hour guided fishing trip on Center Hill Lake in a premium bass boat with latest fish-finding technology.",
+                        "Full-day guided fly fishing trip on the Caney Fork River or Obey River for trophy brown and rainbow trout.",
                     },
+                    price: "400",
+                    priceCurrency: "USD",
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Half Day Trip",
+                      name: "Striper on the Fly — Full Day",
                       description:
-                        "4-hour guided fishing trip perfect for beginners and families.",
+                        "Full-day guided fly fishing for trophy Cumberland River striped bass.",
                     },
+                    price: "400",
+                    priceCurrency: "USD",
                   },
                   {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "Jet Boat Adventure",
+                      name: "Musky Fishing — Full Day",
                       description:
-                        "Explore shallow creeks and rivers in a jet-powered boat that goes where others can't.",
+                        "Full-day guided musky fishing on the Collins River and surrounding waters.",
                     },
+                    price: "400",
+                    priceCurrency: "USD",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "River Smallmouth — Full Day",
+                      description:
+                        "Full-day guided fly fishing for river smallmouth bass.",
+                    },
+                    price: "350",
+                    priceCurrency: "USD",
                   },
                 ],
               },
