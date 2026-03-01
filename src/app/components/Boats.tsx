@@ -15,29 +15,16 @@ const boats = [
     ],
   },
   {
-    name: "Blazer 17' Jet Boat",
-    subtitle: "Nimble Creek Runner",
-    image: "/photos/fishing-scene-1.jpg",
+    name: "Stratos 20' Bass Boat",
+    subtitle: "Advanced Fishing Platform",
+    image: "/photos/new-boat.jpg",
     description:
-      "A nimble 17-foot jet boat built to navigate the tightest waterways. When the creeks and tributaries get too narrow for the Supreme, the Blazer steps in. Ideal for spring creek adventures and getting to the most secluded fishing holes on the Cumberland Plateau.",
+      "The newly added Stratos boat features a 20-foot platform equipped with the latest advancements, including a GPS precision trolling motor, Lowrance electronics, Active Target, and a 200 HP outboard motor. Designed for performance, it offers top speeds exceeding 65 mph with unmatched safety elements like premium equipment and auto-inflating lifejackets.",
     specs: [
-      { label: "Length", value: "17 Feet" },
-      { label: "Drive", value: "Jet Propulsion" },
-      { label: "Best For", value: "Tight Creeks & Rivers" },
-      { label: "Range", value: "Cumberland Plateau & Beyond" },
-    ],
-  },
-  {
-    name: "Hyde 16' Drift Boat",
-    subtitle: "Classic River Float",
-    image: "/photos/spring-creek-falls-2.jpg",
-    description:
-      "The Hyde drift boat is the gold standard for river fly fishing. Purpose-built for floating the Caney Fork and Obey rivers, it gives you the perfect casting platform while Mike rows you through the best trout water in Tennessee. Quiet, stable, and built for all-day comfort.",
-    specs: [
-      { label: "Length", value: "16 Feet" },
-      { label: "Type", value: "Hyde Drift Boat" },
-      { label: "Best For", value: "Trout Float Trips" },
-      { label: "Rivers", value: "Caney Fork & Obey" },
+      { label: "Length", value: "20 Feet" },
+      { label: "Engine", value: "200 HP Outboard" },
+      { label: "Features", value: "GPS Trolling, Lowrance, Active Target" },
+      { label: "Safety", value: "Premium & Auto-Inflating Lifejackets" },
     ],
   },
 ];
@@ -51,11 +38,11 @@ export default function Boats() {
             The Fleet
           </p>
           <h2 className="mt-3 font-[family-name:var(--font-heading)] text-3xl font-bold text-lake-900 sm:text-4xl lg:text-5xl">
-            Three Boats. Any Water.
+            Newly Upgraded Fleet
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Mike doesn&apos;t take short cuts on equipment. From drift boats to
-            jet sleds, every vessel is a top-notch, industry-proven guide boat
+            bass boats, every vessel is a top-notch, industry-proven guide boat
             with a full complement of high-end electronics.
           </p>
         </div>
