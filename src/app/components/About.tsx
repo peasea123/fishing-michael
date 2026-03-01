@@ -6,10 +6,10 @@ export default function About() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1532015917327-7b73ce58a8a1?w=800&q=80&fit=crop"
-                alt="Mike Anderson, Trophy Fishing TN guide, on the water"
+                src="https://images.unsplash.com/photo-1517242810446-cc8951b2be40?w=800&q=80&fit=crop"
+                alt="Fly fishing guide casting on a scenic river"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

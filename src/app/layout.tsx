@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     url: "https://trophyfishingtn.com",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1200&h=630&fit=crop",
+        url: "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=1200&h=630&fit=crop",
         width: 1200,
         height: 630,
-        alt: "Fly fishing on a Tennessee river at sunrise",
+        alt: "Scenic lake and mountains at golden sunrise",
       },
     ],
   },
@@ -110,7 +110,7 @@ export default function RootLayout({
                 name: "Mike Anderson",
               },
               image:
-                "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1200&h=630&fit=crop",
+                "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=1200&h=630&fit=crop",
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Guided Fishing Trips",

@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=1920&q=80&fit=crop"
-        alt="Fly fishing on a scenic Tennessee river at sunrise"
+        src="https://images.unsplash.com/photo-1500463959177-e0869687df26?w=1920&q=80&fit=crop"
+        alt="Misty lake and mountains at golden sunrise"
         fill
         priority
         className="object-cover"

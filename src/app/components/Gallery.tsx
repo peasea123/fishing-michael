@@ -12,7 +12,7 @@ const photos = [
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1440558382541-ff4e12e25e65?w=400&q=80&fit=crop",
+    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80&fit=crop",
     alt: "Calm waters reflecting dawn sky on Center Hill Lake",
     span: "",
   },
