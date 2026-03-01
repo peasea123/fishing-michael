@@ -8,8 +8,8 @@ export default function About() {
           <div className="relative">
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1517242810446-cc8951b2be40?w=800&q=80&fit=crop"
-                alt="Fly fishing guide casting on a scenic river"
+                src="/photos/mike-26inch-fish.jpg"
+                alt="Mike Anderson with a trophy catch"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

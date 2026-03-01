@@ -4,7 +4,7 @@ export default function CTA() {
   return (
     <section id="contact" className="relative py-20 sm:py-28 scroll-mt-16 overflow-hidden">
       <Image
-        src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=80&fit=crop"
+        src="/photos/flickr-river-2.jpg"
         alt="Tennessee river at golden hour"
         fill
         className="object-cover"

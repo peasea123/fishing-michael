@@ -2,34 +2,64 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80&fit=crop",
-    alt: "Trophy trout held over crystal clear water on the Caney Fork River",
+    src: "/photos/trophy-fish-1.jpg",
+    alt: "Trophy catch with Mike Anderson on the Caney Fork",
     span: "sm:col-span-2 sm:row-span-2",
   },
   {
-    src: "https://images.unsplash.com/photo-1606567595334-d39972c85dbe?w=400&q=80&fit=crop",
-    alt: "Fly rods rigged and ready for a guided trip on the river",
+    src: "/photos/flickr-striper-2.jpg",
+    alt: "Monster striper caught on the fly — Cumberland River",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=400&q=80&fit=crop",
-    alt: "Calm waters reflecting dawn sky on Center Hill Lake",
+    src: "/photos/brown-trout-closeup.jpg",
+    alt: "Beautiful Caney Fork brown trout closeup",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1517242810446-cc8951b2be40?w=400&q=80&fit=crop",
-    alt: "Angler casting a fly line into golden morning light",
+    src: "/photos/flickr-striper-5.jpg",
+    alt: "Client with a trophy striper on the fly",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1559734840-f9509ee5677f?w=400&q=80&fit=crop",
-    alt: "Smallmouth bass caught on a fly rod in Tennessee",
+    src: "/photos/mike-striper-28inch.jpg",
+    alt: "Mike Anderson with a 28-inch striper",
     span: "",
   },
   {
-    src: "https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=600&q=80&fit=crop",
-    alt: "Scenic river view at sunrise — the Caney Fork at its finest",
+    src: "/photos/spring-creek-falls-2.jpg",
+    alt: "Scenic spring creek waterfall on the Cumberland Plateau",
+    span: "",
+  },
+  {
+    src: "/photos/flickr-striper-1.jpg",
+    alt: "Striper on the fly — the fight is on",
+    span: "",
+  },
+  {
+    src: "/photos/striper-catch-1.jpg",
+    alt: "Another trophy striper from Tennessee waters",
     span: "sm:col-span-2",
+  },
+  {
+    src: "/photos/client-striper-chad.jpg",
+    alt: "Happy client with a big striper catch",
+    span: "",
+  },
+  {
+    src: "/photos/flickr-striper-9.jpg",
+    alt: "Striper fishing action on the Cumberland River",
+    span: "",
+  },
+  {
+    src: "/photos/mike-client-brown-trout.jpg",
+    alt: "Mike with a client and a beautiful brown trout",
+    span: "",
+  },
+  {
+    src: "/photos/river-scenic-overlook.jpg",
+    alt: "Scenic overlook of a Tennessee river valley",
+    span: "",
   },
 ];
 
@@ -51,7 +81,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 sm:gap-4">
           {photos.map((photo, idx) => (
             <div
               key={idx}
@@ -62,10 +92,10 @@ export default function Gallery() {
                 alt={photo.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 33vw, 25vw"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <p className="absolute bottom-4 left-4 right-4 text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <p className="absolute bottom-3 left-3 right-3 text-xs sm:text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {photo.alt}
               </p>
             </div>

@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     url: "https://trophyfishingtn.com",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=1200&h=630&fit=crop",
+        url: "https://trophyfishingtn.com/photos/trophy-fish-1.jpg",
         width: 1200,
         height: 630,
-        alt: "Scenic lake and mountains at golden sunrise",
+        alt: "Trophy catch with Mike Anderson — Trophy Fishing TN",
       },
     ],
   },
@@ -110,7 +110,7 @@ export default function RootLayout({
                 name: "Mike Anderson",
               },
               image:
-                "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=1200&h=630&fit=crop",
+                "https://trophyfishingtn.com/photos/trophy-fish-1.jpg",
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Guided Fishing Trips",

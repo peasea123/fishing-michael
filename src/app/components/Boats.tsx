@@ -4,8 +4,7 @@ const boats = [
   {
     name: "Supreme 20' Jet Boat",
     subtitle: "The Go-Anywhere Jet Sled",
-    image:
-      "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&q=80&fit=crop",
+    image: "/photos/fishing-action-1.jpg",
     description:
       "Mike's flagship — a 20-foot fiberglass jet boat made famous on the White River as the ultimate guide boat. With jet-drive propulsion, this boat runs wide open on water just inches deep, unlocking shallow creeks, skinny rivers, and remote backwater spots that most anglers will never see. Perfect for striper, trout, and smallmouth trips.",
     specs: [
@@ -18,8 +17,7 @@ const boats = [
   {
     name: "Blazer 17' Jet Boat",
     subtitle: "Nimble Creek Runner",
-    image:
-      "https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&q=80&fit=crop",
+    image: "/photos/flickr-river-2.jpg",
     description:
       "A nimble 17-foot jet boat built to navigate the tightest waterways. When the creeks and tributaries get too narrow for the Supreme, the Blazer steps in. Ideal for spring creek adventures and getting to the most secluded fishing holes on the Cumberland Plateau.",
     specs: [
@@ -32,8 +30,7 @@ const boats = [
   {
     name: "Hyde 16' Drift Boat",
     subtitle: "Classic River Float",
-    image:
-      "https://images.unsplash.com/photo-1500463959177-e0869687df26?w=800&q=80&fit=crop",
+    image: "/photos/fall-casting-scenic.jpg",
     description:
       "The Hyde drift boat is the gold standard for river fly fishing. Purpose-built for floating the Caney Fork and Obey rivers, it gives you the perfect casting platform while Mike rows you through the best trout water in Tennessee. Quiet, stable, and built for all-day comfort.",
     specs: [
@@ -70,13 +67,12 @@ export default function Boats() {
               className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center"
             >
               <div className={idx % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-2xl">
                   <Image
                     src={boat.image}
                     alt={boat.name}
-                    width={800}
-                    height={500}
-                    className="h-full w-full object-cover"
+                    fill
+                    className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
