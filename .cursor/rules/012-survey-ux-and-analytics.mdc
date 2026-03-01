@@ -1,0 +1,32 @@
+---
+description: Standards for high-completion rate survey UX and time-series trend analytics
+globs: app/survey/**, app/admin/**, components/survey/**
+alwaysApply: false
+---
+
+# Survey UX & Analytics Standards
+
+## High-Completion Rate UX
+- **Frictionless Entry**: Use Magic Links or signed tokens in SMS to avoid manual password entry.
+- **Mobile-First**: Surveys must be fully responsive and usable with one hand (large tap targets).
+- **Speed to Complete**: Target < 60 seconds. Use:
+  - Radio groups/button toggles instead of dropdowns.
+  - Auto-focus the first field.
+  - Minimalistic design—one question at a time or a single short scroll.
+- **Progressive Disclosure**: Only ask for "anything else" if they indicate they have extra feedback.
+
+## Trend Analysis Patterns
+- **Standardized Scales**: Always use the same 1-5 scales for `overall_rating`, `clarity`, and `confidence` across all sessions to enable longitudinal tracking.
+- **Session Linking**: Ensure every response is strictly tied to a `class_sessions` record to map feedback to the specific date/topic.
+- **Aggregation Logic**:
+  - Compute a `rolling_average` (last 3 sessions) for each student.
+  - Use "Delta Analysis" to highlight students whose scores have dropped significantly compared to their own baseline.
+
+## Admin Backend Design
+- **Summary First**: The dashboard should prioritize the "Action List" (at-risk students and top confusions) over raw data.
+- **Visual Trends**: Use simple sparklines or trend indicators (up/down arrows) for averages.
+- **Contextual drill-down**: Allow the admin to click a "Theme" to see all supporting student comments immediately.
+
+## Data Consistency
+- Do not change survey questions mid-term unless versioning the `surveys` table.
+- Use the `response_analysis` keywords to group feedback into "Trend Clusters" (e.g., "Pace", "Topic: Amortization", "Audio Quality").

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lake-900: #0c2d48;
+  --color-lake-800: #14466b;
+  --color-lake-700: #1a5f8e;
+  --color-lake-600: #2980b9;
+  --color-lake-500: #3498db;
+  --color-lake-400: #5dade2;
+  --color-lake-300: #85c1e9;
+  --color-lake-200: #aed6f1;
+  --color-lake-100: #d6eaf8;
+  --color-lake-50: #ebf5fb;
+
+  --color-forest-900: #1b4332;
+  --color-forest-800: #2d6a4f;
+  --color-forest-700: #40916c;
+  --color-forest-600: #52b788;
+  --color-forest-500: #74c69d;
+
+  --color-sunset-500: #e67e22;
+  --color-sunset-400: #f39c12;
+  --color-sunset-300: #f1c40f;
+
+  --font-heading: "Georgia", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,32 @@
+---
+description: Standards for AI-driven sentiment analysis and contextual text analysis
+globs: app/api/cron/analyze/**, lib/ai/**
+alwaysApply: false
+---
+
+# AI Analysis & Sentiment Standards
+
+## Overview
+This rule defines the patterns for using Generative AI (LLMs) to infer sentiment and extract themes from student feedback, covering both objective scales and freeform text.
+
+## Sentiment Inference Patterns
+- **Hybrid Analysis**: Combine objective ratings (1-5 scales) with LLM-based text analysis to compute a "Confidence Score" for the sentiment.
+- **Contextual Extraction**: Don't just look for "good/bad". Extract:
+  - **Primary Confusion**: The specific topic the student is struggling with.
+  - **Tone**: Frustrated, neutral, or encouraged.
+  - **Actionability**: Is the feedback something the instructor can change immediately?
+
+## Prompt Engineering
+- **JSON Output**: Always require the LLM to return valid JSON for easy parsing into the `response_analysis` table.
+- **System Prompt**: Define a consistent persona: "You are an educational psychologist analyzing student sentiment to improve learning outcomes."
+- **Few-Shot Examples**: Provide examples of "high-risk" vs "low-risk" sentiment to ground the model.
+
+## Implementation Details
+- **Baseline Analysis**: A heuristic-based sentiment analysis is implemented in `/api/cron/analyze/route.ts` using keyword matching and objective ratings.
+- **Batching**: To minimize costs and API calls, batch multiple responses from a single session into one LLM request when possible.
+- **Error Handling**: Provide a fallback to the heuristic sentiment score (defined in `010-student-feedback-system.mdc`) if the AI call fails.
+- **Privacy**: Strip any PII (names/emails) from the text before sending it to an external LLM API if required by privacy policy.
+
+## Table Integration
+- Store results in `response_analysis` (per student) and `session_analysis` (aggregated themes).
+- Map AI-extracted themes to a stable list of course topics to enable trend analysis over time.

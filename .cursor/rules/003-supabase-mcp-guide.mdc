@@ -1,0 +1,22 @@
+---
+description: Guidance for using the Supabase MCP server tools effectively
+globs: 
+alwaysApply: true
+---
+
+# Supabase MCP Server Guide
+
+## Overview
+This rule provides concise guidance on using the integrated Supabase MCP tools to manage the database, explore documentation, and handle project configuration.
+
+## Usage Strategy
+- **Explore First**: When starting a task involving the database, use `list_tables` and `list_migrations` to understand the current schema and history.
+- **Documentation**: Use `search_docs` via GraphQL queries to find the most up-to-date patterns for RLS, Auth, or SQL syntax.
+- **Type Generation**: Always run `generate_typescr25695af` after modifying the database schema to ensure the local TypeScript types match the remote state.
+- **DDL Changes**: Use `apply_migration` for permanent schema changes and `execute_sql` for one-off data inspections or minor updates.
+- **Health & Security**: Regularly check `get_advisors` for security and performance recommendations, and `get_logs` for troubleshooting Edge Functions or Auth issues.
+
+## Best Practices
+- **Prefer MCP Over Manual SQL**: Use the specialized MCP tools for project configuration (URL, keys) and Edge Function management.
+- **Verify Before Mutating**: List existing resources before creating new ones to avoid conflicts.
+- **Contextual Search**: When using `search_docs`, keep queries specific (e.g., "Postgres triggers" or "Auth magic link").

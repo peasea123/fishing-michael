@@ -1,0 +1,33 @@
+---
+description: UI and styling conventions using Tailwind CSS and Radix UI
+globs: components/**, app/**/*.tsx
+alwaysApply: false
+---
+
+# UI & Styling Standards
+
+## Core Libraries
+- **Tailwind CSS**: Use for all styling. Follow utility-first principles.
+- **Radix UI**: Used via the `@components/ui/` primitive components (Badge, Button, Card, etc.).
+- **Lucide React**: Default icon library.
+
+## Component Patterns
+- **Atomic UI Components**: Always check `@components/ui/` before creating a new UI component. Use existing shadcn-like components.
+- **Theme Support**: Use `next-themes` and `@components/theme-switcher.tsx`. Use Tailwind's `dark:` modifier for dark mode styles.
+- **Consistency**: Match the design of the hero section and auth forms in `@components/hero.tsx` and `@components/login-form.tsx`.
+
+## Styling Guidelines
+- Use CSS variables for colors (defined in `@app/globals.css`).
+- Use the `cn()` utility from `@lib/utils.ts` for conditional class merging.
+  ```typescript
+  import { cn } from "@/lib/utils";
+  
+  export function MyComponent({ className }: { className?: string }) {
+    return <div className={cn("p-4 bg-primary", className)} />;
+  }
+  ```
+- Favor responsive design using Tailwind's `sm:`, `md:`, `lg:` prefixes.
+
+## Accessibility
+- Use Radix UI primitives to ensure high accessibility (ARIA labels, keyboard navigation).
+- Ensure color contrast meets WCAG standards.

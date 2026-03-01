@@ -1,0 +1,48 @@
+---
+description: Mandatory Supabase patterns for Auth, SSR, and Client/Server interactions including Admin access
+globs: 
+alwaysApply: true
+---
+
+# Supabase Implementation Standards
+
+## Core Principles
+- Maintain the structure of the Supabase starter template.
+- Use Supabase SSR (@supabase/ssr) for all authentication and data fetching.
+- Always prefer Row Level Security (RLS) over service-role bypass except in specific administrative/cron contexts.
+
+## Client Creation
+- **Server-Side**: Always use the `createClient` helper from `@lib/supabase/server.ts` for Server Components, Server Actions, and Route Handlers.
+  ```typescript
+  import { createClient } from "@/lib/supabase/server";
+  const supabase = await createClient();
+  ```
+- **Admin/Cron**: Use `createAdminClient` from `@lib/supabase/server.ts` for background tasks requiring service-role bypass.
+  ```typescript
+  import { createAdminClient } from "@/lib/supabase/server";
+  const supabase = await createAdminClient();
+  ```
+- **Client-Side**: Always use the `createClient` helper from `@lib/supabase/client.ts` for Client Components.
+  ```typescript
+  "use client";
+  import { createClient } from "@/lib/supabase/client";
+  const supabase = createClient();
+  ```
+
+## Authentication Flow
+- Follow the patterns in `@app/auth/` for login, sign-up, and password resets.
+- Use Middleware for session refreshing as implemented in the template.
+- Protect routes using the pattern found in `@app/protected/page.tsx`.
+
+## Data Fetching & Mutations
+- **Server Components**: Fetch data directly using the server client.
+- **Server Actions**: Use for all data mutations (INSERT, UPDATE, DELETE).
+- **Client Components**: Use for real-time subscriptions or interactive elements requiring the browser client.
+
+## Security (RLS)
+- Every table must have RLS enabled.
+- Follow the policy patterns in `supabase/migrations/` (e.g., `0002_rls.sql`).
+- Use `auth.uid()` to restrict student access to their own data.
+- Use the `is_course_admin(course_id)` SQL function to validate administrative access in RLS policies.
+
+- For testing the admin backend use the user id `philip@chanpart.com` and the password `testtest`.

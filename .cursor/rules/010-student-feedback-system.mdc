@@ -1,0 +1,47 @@
+---
+description: Core standards for the Senticient System, including SMS campaigns, cron jobs, and at-risk logic
+globs: 
+alwaysApply: true
+---
+# Senticient Feedback System Standards
+
+## System Overview
+- Automated post-class surveys via SMS (ClickSend).
+- Analytics to identify "at-risk" students.
+- Supabase heartbeat to prevent project pausing.
+- Branding: Senticient (Navy/Sky Blue theme).
+
+## SMS Delivery (ClickSend)
+- **SDK**: Use the official `clicksend` Node.js SDK for all messaging.
+- **Campaigns**: Use ClickSend SMS Campaigns for URL shortening and unique link tracking.
+- **Direct Messaging**: Admins can send ad-hoc SMS to students via the dashboard.
+- **Admin Copies**: Courses can be configured to include admins in all survey SMS deliveries.
+- **Tracking**: Reconcile ClickSend tracking data back to students via phone numbers.
+- **Opt-out**: Mandatory "Reply STOP to opt out" in all SMS bodies.
+- **Reference**: Follow the integration plan in `docs/CLICKSEND_CAMPAIGNS.md`.
+
+## Scheduling & Crons (Vercel)
+- **Send Survey**: `/api/cron/send-surveys` (Tue/Thu at 9:00 PM America/Chicago).
+- **Tracking Sync**: `/api/cron/pull-click-tracking` (Hourly).
+- **Sentiment & Trends**: `/api/cron/analyze` (Daily at 2:30 AM).
+- **Heartbeat**: `/api/cron/heartbeat` (Sun/Wed at 3:00 AM).
+- **Idempotency**: Always verify `send_log` or session status before sending to prevent duplicates.
+- **Security**: All cron routes must verify `CRON_SECRET` in headers and use `createAdminClient`.
+- **Reference**: See `vercel.json` for schedules.
+
+## Analytics & "At-Risk" Logic
+- **At-Risk Flags**:
+  - Rolling 3-session average rating/confidence drops by >= 1.0 vs baseline.
+  - Negative sentiment in 2 consecutive sessions.
+- **Sentiment Analysis**: Use heuristic scoring (implemented in `/api/cron/analyze`) initially.
+- **Reference**: See `docs/PRD.md` for logic details.
+
+## Database & Security
+- **RLS**: 
+  - Students: INSERT only their own response.
+  - Admin: Full access to courses they administer via `is_course_admin(course_id)`.
+- **Tables**: Follow schema in `supabase/migrations/0001_init.sql`.
+
+## Implementation Guidance
+- When building features, refer to `docs/ARCHITECTURE.md`.
+- Use the multi-agent workflow defined in `docs/multi-agent-workflow.md`.
