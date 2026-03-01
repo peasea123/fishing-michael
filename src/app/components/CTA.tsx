@@ -4,8 +4,8 @@ export default function CTA() {
   return (
     <section id="contact" className="relative py-20 sm:py-28 scroll-mt-16 overflow-hidden">
       <Image
-        src="/photos/flickr-river-2.jpg"
-        alt="Tennessee river at golden hour"
+        src="/photos/mike-big-striper-3.jpg"
+        alt="Mike Anderson with a trophy striper — Trophy Fishing TN"
         fill
         className="object-cover"
         sizes="100vw"

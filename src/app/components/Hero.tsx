@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Image
-        src="/photos/flickr-river-1.jpg"
-        alt="Scenic Tennessee river at sunrise — Trophy Fishing TN"
+        src="/photos/fall-casting-scenic.jpg"
+        alt="Fly fishing on a misty Tennessee river at sunrise — Trophy Fishing TN"
         fill
         priority
         className="object-cover"

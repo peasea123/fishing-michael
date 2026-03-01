@@ -17,7 +17,7 @@ const boats = [
   {
     name: "Blazer 17' Jet Boat",
     subtitle: "Nimble Creek Runner",
-    image: "/photos/flickr-river-2.jpg",
+    image: "/photos/fishing-scene-1.jpg",
     description:
       "A nimble 17-foot jet boat built to navigate the tightest waterways. When the creeks and tributaries get too narrow for the Supreme, the Blazer steps in. Ideal for spring creek adventures and getting to the most secluded fishing holes on the Cumberland Plateau.",
     specs: [
@@ -30,7 +30,7 @@ const boats = [
   {
     name: "Hyde 16' Drift Boat",
     subtitle: "Classic River Float",
-    image: "/photos/fall-casting-scenic.jpg",
+    image: "/photos/spring-creek-falls-2.jpg",
     description:
       "The Hyde drift boat is the gold standard for river fly fishing. Purpose-built for floating the Caney Fork and Obey rivers, it gives you the perfect casting platform while Mike rows you through the best trout water in Tennessee. Quiet, stable, and built for all-day comfort.",
     specs: [
